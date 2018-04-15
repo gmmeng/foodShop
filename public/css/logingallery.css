@@ -1,0 +1,286 @@
+/*
+    description: app stylesheet
+    author: Gabriel Moreira
+    date: March 22nd, 2018
+*/
+
+
+/*	General Styling Rules	*/
+*
+{
+    font-family: calibri, arial, "times new roman";
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: transparent;
+}
+button
+{
+	background-color: transparent;
+	color: black;
+	border: 3px double brown;
+	width: 200px;
+}
+button:hover
+{
+	background-color: rgb(134, 33, 33);
+    color: #ffffff;
+}
+h1, h2, h3, h4
+{
+	color: rgb(73, 40, 40);
+    text-align: center;
+}
+
+/*	Styling Rules: gallery	*/
+.clsForm
+{
+	border: 0px solid brown;
+	height: 540px;
+	left: 0;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 900px;			
+}
+.clsContent
+{
+	border: 3px double brown;
+	border-radius: 2%;
+	height: 380px;
+	left: 0;
+	margin: 0 auto;
+	padding-top: 20px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 60px;
+	width: 400px;		
+}
+.clsImageName
+{
+	border: 0px solid #22bfee;
+	bottom: 0;
+	color: rgb(73, 40, 40);
+	height: 20px;
+	left: 0;
+	margin: 2em auto;
+	padding: 1vh;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	width: 400px;		
+}
+div.clsSelection
+{
+	border: 0px solid #0f0;
+	height: 400px;
+	margin: 0;
+	position: absolute;
+	text-align: right;
+	top: 60px;
+	width: 200px;		
+}
+div.clsUsernameLogout
+{
+	border: 0px solid #00f;
+	height: 20px;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	text-align: left;
+    top: 60px;
+	width: 200px;			
+}
+div#divUsername
+{
+    color: rgb(73, 40, 40);	
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    transition: opacity 1s ease-out;    
+}
+div#divLogout
+{
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+a#aLogout
+{
+    color: rgb(0, 0, 199);
+    opacity: 0;	
+    text-decoration: underline;
+    transition: opacity 1s ease-in;        
+}
+div.clsUsernameLogout:hover div#divUsername
+{
+    opacity: 0;
+}
+div.clsUsernameLogout:hover a#aLogout
+{
+    opacity: 1;	
+}
+
+/* Styling Rules: Order*/
+div.clsProduct
+{
+	border: 0px solid #00f;
+	height: 20px;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	text-align: left;
+    top: 100px;
+	width: 200px;			
+}
+
+/*End Order*/
+
+img
+{
+	height: 360px;
+	left: 0;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	width: 360px;
+}
+select
+{
+	border: 1px solid brown;
+	background-color: transparent;
+	color: #7b9b9b;
+	float: right;
+	height: 1.5em;
+	margin: 0;
+	width: 200px;
+}
+input[type="text"], input[type="password"], input[type="email"]
+{
+	margin-bottom: 5px;
+    width: 300px;
+}
+input[type="email"]:invalid		
+{
+	color: #f00;
+}
+
+/*	Styling Rules: login	*/
+a#aRegister
+{
+	background-color: rgb(134, 33, 33);
+	border: 0px solid brown;
+	color: white;
+	display: inline-block;
+	font: 0.9em calibri;
+	margin-bottom: 5px;
+	text-align: center;
+	text-decoration: none;
+	width: 300px;	
+}
+button#btnLogin
+{
+	margin-bottom: 5px;
+	width: 300px;
+}
+div.clslogincontent
+{
+	border: 3px double brown;
+	border-radius: 5px;
+	height: 180px;
+	left: 0;
+    margin: 0 auto;
+	padding: 6px 3px 6px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+    top: 50px;
+    width: 360px;		
+}
+label#lblMessage
+{
+	background-color: transparent;
+	display: inline-block;
+	font: 0.9em calibri;	
+	margin-bottom: 5px;	
+	width: 300px;	
+}
+
+/*	Styling Rules: register	*/
+button#btnRegister
+{
+	float: none;
+	margin-bottom: 5px;
+	width: 300px;
+}
+div.clsregistercontent
+{
+	border: 3px double brown;
+	border-radius: 2%;
+    margin: 3vh auto;
+	padding: 2vh 1vh 5vh;
+    text-align: center;
+    top: 10vh;
+    width: 360px;		
+}
+
+/*	Styling Rules: purchase	*/
+div.clsPurchBtn
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+input#btnPurchase, input#btnCancel
+{
+	margin-bottom: 5px;
+	width: 100px;
+}
+div.clspurchasecontent
+{
+	border: 3px double brown;
+	border-radius: 5px;
+	height: 400px;
+	left: 0;
+    margin: 0 auto;
+	padding: 6px 3px 6px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+    top: 50px;
+    width: 360px;		
+}
+label#lblDescription, label#lblQuantity
+{
+	background-color: transparent;
+	display: inline-block;
+	font: 0.9em calibri;	
+	margin-bottom: 5px;	
+	width: 300px;	
+}
+
+label#lblPrice, label#lblName
+{
+	background-color: transparent;
+	display: inline-block;
+	font: 1em calibri black;	
+	font-weight: bold;
+	margin-bottom: 5px;	
+	width: 300px;	
+}
+
+.clsPurchImage>img
+{
+	top: 15px;
+	height: 100px;
+	left: 0;
+	margin: 0 auto;
+	position: relative;
+	right: 0;
+	width: 100px;
+}

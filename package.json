@@ -1,0 +1,21 @@
+{
+  "name": "server_js",
+  "version": "1.0.0",
+  "description": "Application handles and provides login, register, main and purchase pages.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Moreira",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "client-sessions": "^0.8.0",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.0.7",
+    "path": "^0.12.7",
+    "randomstring": "^1.1.5"
+  }
+}

@@ -1,0 +1,67 @@
+<!--
+	purchase.hbs
+	author: Gabriel Moreira
+	WEB322 Assignement Three
+-->
+
+<div class="clspurchasecontent">
+    <h3>Purchase</h3>
+    <br>
+    <div class = "clsPurchImage">
+        <img src="./images/{{data.imgFile}}" alt = "Image Not Found">
+    </div>
+    <br>
+    <label id="lblName">{{data.Name}}</label>
+    <br>
+    <p id="lblDescription">{{data.Description}}</p>
+    <br>
+    <label id="lblPrice">${{data.Price}}</label>
+    <br>
+    <label id="lblQuantity">Quantity left: {{data.Quantity}}</label>
+    <br>
+    <form id="frmPurchase" class="clsPurch" method="POST">
+        <input type="textarea" id="txtQuantity" name = "txtQuantity" placeholder="Quantity" onkeypress="javascript:return isNumber(event)">
+    </form>
+    <br>
+    <div class = "clsPurchBtn">
+        <button id="btnPurchase" type="button" value="Purchase" onclick="fPurchaseButton()">Purchase</button>
+        <button id="btnCancel" type="button" value="Cancel" onclick="fCancelButton()">Cancel</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function isNumber(evt) 
+    {
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        if (iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+            return false;
+
+        return true;
+    }  
+
+    function fPurchaseButton()
+    {
+        if(document.getElementById("txtQuantity").value>{{data.Quantity}})
+        {
+            alert("Not enough units to sell.");
+        }
+        else if(document.getElementById("txtQuantity").value=="")
+        {
+            alert("Please enter a quantity to buy.")
+        }
+        else
+        {
+            alert("SOLD!");
+            document.getElementById("frmPurchase").method="GET"
+            document.getElementById("frmPurchase").action = "/purchase";
+            document.getElementById("frmPurchase").submit();
+        }
+    }
+    function fCancelButton()
+    {
+        alert("Maybe next time.")
+        document.getElementById("frmPurchase").method="POST"
+        document.getElementById("frmPurchase").action = "/cancel";
+        document.getElementById("frmPurchase").submit();
+    }
+</script>

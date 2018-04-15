@@ -1,0 +1,58 @@
+<!--
+	index.hbs
+	author: Gabriel Moreira
+    WEB322 Assignment Three
+-->
+
+<form id="frmGallery" class="clsForm" method="POST" action="/shop">
+    <h1>{{data.imgTitle}}</h1>
+
+    <div class="clsSelection">
+        <select name = "foodOption" id = "foodOption">
+            <option></option>
+            {{#each data.imgList}}
+            <option>{{this}}</option>
+            {{/each}}
+        </select>
+        <br><br>
+        <button type= "submit" value = "submit">Submit</button>
+    </div>
+
+    <div class="clsContent" ondblclick="fSubmitPurchase();">
+        <img id="indexImg" src="./images/{{data.imgFile}}" alt = "Image Not Found">
+    </div>
+
+    <div class="clsImageName">
+        {{data.imgDesc}}
+    </div>
+    
+    <div class="clsUsernameLogout">
+        <div id="divUsername">{{data.userName}}</div>
+        <div id="divLogout"><a id="aLogout" onclick="fSubmitLogout();">Logout</a></div>
+    </div>
+
+    <div class = "clsProduct">
+        <p>{{data.prodName}}</p>
+        <br>
+        <p>{{data.prodDescription}}</p>
+        <br>
+        <p>{{data.prodQuantity}}</p>
+        <br>
+        <button hidden = {{data.btnHide}} type= "submit" value = "submit">Order</button>
+    </div>
+</form>
+
+<script type="text/javascript">
+    function fSubmitLogout()
+    {
+        document.getElementById("frmGallery").action = "/logout";
+        document.getElementById("frmGallery").submit();
+    }
+
+    function fSubmitPurchase(){
+        document.getElementById("frmGallery").action = "/purchase";
+        document.getElementById("frmGallery").method = "POST";
+        document.getElementById("frmGallery").submit();
+    }
+</script>
+

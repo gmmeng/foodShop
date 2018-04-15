@@ -1,0 +1,21 @@
+<!--
+	register.hbs
+	author: Gabriel Moreira
+	WEB322 Assignement Three
+-->
+
+<form method="post" action="/register">
+	<div class="clsregistercontent">
+		<h3>Account Registration</h3>
+		<br>
+		<input id="txtUserName" name="txtUserName" placeholder="Email" type="email" value = {{data.userName}}>
+		<br>
+		<input id="txtPassword" name="txtPassword" placeholder="Password" value="" type="password">
+		<br>
+		<input id="txtConfirmPassword" name="txtConfirmPassword" placeholder="Confirm Password" value="" type="password">
+		<br>
+		<button id="btnRegister" type="submit" value="submit">Register</button>
+		<br>
+		<label id="lblMessage">{{data.Message}}</label>
+	</div>
+</form>
