@@ -6,7 +6,7 @@
                  straight-forward approach to the NoSQL database.
 
     author: Gabriel Moreira
-    date: March 22nd, 2018
+    date: January 23nd, 2019
 */
 
 //requirements
