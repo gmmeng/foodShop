@@ -8,8 +8,7 @@ pipeline {
     }
     stage('Unit Tests') {
       steps {
-        bat 'H:'
-        bat 'cd junitreportgeneration'
+        bat 'cd H:\\junitreportgeneration'
         bat 'mvn clean install'
       }
     }
