@@ -8,14 +8,12 @@ pipeline {
     }
     stage('Unit Tests') {
       steps {
-        bat 'cd H:\\junitreportgeneration'
-        bat 'mvn clean install'
+        echo 'Unit Testing'
       }
     }
     stage('Cucumber Test') {
       steps {
-        bat 'cd C:\\Users\\gabriel.moreira\\Desktop\\CucumberExample\\CucumberExample'
-        bat 'mvn clean install'
+        echo 'Feature Testing/Cucumber Test'
       }
     }
     stage('Deployment') {
